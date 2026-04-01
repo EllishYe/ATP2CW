@@ -6,7 +6,7 @@ public class InventorySlotManager  : Singleton<InventorySlotManager>
 {
     public Image[] slots;
 
-    
+    public InventoryButton inventoryButton;
 
     public void AddItem(Sprite itemSprite)
     {
@@ -16,6 +16,17 @@ public class InventorySlotManager  : Singleton<InventorySlotManager>
             {
                 slots[i].sprite = itemSprite;
                 slots[i].enabled = true;
+
+                // open inventory panel if it's closed
+                if (inventoryButton != null)
+                {
+                    inventoryButton.OpenIfClosed();
+                }
+                else
+                {
+                    Debug.LogWarning("InventorySlotManager: inventoryButton not found");
+                }
+
                 return;
             }
         }

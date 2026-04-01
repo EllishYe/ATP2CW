@@ -2137,6 +2137,7 @@ MonoBehaviour:
   - {fileID: 1488320199}
   - {fileID: 1916192284}
   - {fileID: 142584135}
+  inventoryButton: {fileID: 1269524520}
 --- !u!1 &1916192282
 GameObject:
   m_ObjectHideFlags: 0
