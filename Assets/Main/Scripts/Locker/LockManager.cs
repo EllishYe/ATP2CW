@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LockManager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class LockManager : MonoBehaviour
 
     public GameObject lockContentsContainer;
     public SuitcaseOpen suitcaseOpen;
+
+    public Image lockButtonImage;
+    public Sprite imageBTN_off;// Default closed image
+    public Sprite imageBTN_on;// Correct password image
+    private bool isPasswordCorrect = false;
 
     public void CheckPassword()
     {
@@ -35,13 +41,22 @@ public class LockManager : MonoBehaviour
 
         if (isCorrect)
         {
-            Debug.Log("√‹¬Î’˝»∑£°");
-            OnUnlock();
+            Debug.Log("Password is correct£°");
+
+            //update button image
+            if (lockButtonImage != null && imageBTN_on != null)
+            {
+                lockButtonImage.sprite = imageBTN_on;
+            }
+            //OnUnlock();
+            isPasswordCorrect = true;
         }
         else
         {
-            Debug.Log("√‹¬Î¥ÌŒÛ£°");
-            OnFail();
+            if (lockButtonImage != null && imageBTN_off != null)
+            {
+                lockButtonImage.sprite = imageBTN_off;
+            }
         }
     }
 
@@ -71,6 +86,22 @@ public class LockManager : MonoBehaviour
 
     void OnFail()
     {
-        // TODO£∫¥ÌŒÛ∑¥¿°£®∂∂∂Ø/∫Ï…´…¡À∏£©
+        // TODO£∫fail feedback£®∂∂∂Ø/∫Ï…´…¡À∏£©
+    }
+
+    public void OnOpenButtonPressed()
+    {
+        if (isPasswordCorrect)
+        {
+            Debug.Log("OnClick:Password is CORRECT,unlock box");
+            OnUnlock();
+        }
+        else
+        {
+            Debug.Log("OnClick:Password is WRONG");
+
+            // optional:fail feedback
+            //OnFail();
+        }
     }
 }
