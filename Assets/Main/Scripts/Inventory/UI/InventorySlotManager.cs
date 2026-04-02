@@ -16,6 +16,7 @@ public class InventorySlotManager  : Singleton<InventorySlotManager>
             {
                 slots[i].sprite = itemSprite;
                 slots[i].enabled = true;
+                //slots[i].SetNativeSize();
 
                 // open inventory panel if it's closed
                 if (inventoryButton != null)

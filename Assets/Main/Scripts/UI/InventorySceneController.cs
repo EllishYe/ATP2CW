@@ -46,4 +46,5 @@ public class InventorySceneController : MonoBehaviour
             inventoryUI.SetActive(true);
         }
     }
+
 }
