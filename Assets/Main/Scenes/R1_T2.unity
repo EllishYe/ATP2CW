@@ -1445,7 +1445,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 66.64, y: 40.13112}
+    oldSize: {x: 66.869995, y: 40.28112}
     newSize: {x: 66.64, y: 40.13112}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1502,7 +1502,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8307180363268045459, guid: 9fc4298716a921440a0b13a094179cce, type: 3}
+  m_Sprite: {fileID: -1537094123362371335, guid: 5241ae0149e85ca4db5d20d715475e7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1881,7 +1881,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3383871904171131866, guid: a09612fdadc3c2149ace09836c13a58b, type: 3}
+  m_Sprite: {fileID: 5993589753683022100, guid: 4590ebfce3c2df447a9c2a497252db67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2933,7 +2933,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 38.84, y: 51.481434}
+    oldSize: {x: 38.960003, y: 51.541435}
     newSize: {x: 38.84, y: 51.481434}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2990,7 +2990,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -743675659880701158, guid: 1147c18d0bc7fd241b2ca4fdf299f0d7, type: 3}
+  m_Sprite: {fileID: -774860801760781864, guid: 79f625b19b3d9d645a718e59e79d69ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6018,7 +6018,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 51.43, y: 48.78136}
+    oldSize: {x: 51.609997, y: 48.991364}
     newSize: {x: 51.43, y: 48.78136}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6075,7 +6075,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8606952676598786282, guid: 56f7ef6b95aecb148ae805e78ac43007, type: 3}
+  m_Sprite: {fileID: -4154837484666775976, guid: d2f1d44e2e043c24f87538ca87c43203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
