@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class ItemPickup : MonoBehaviour
+public class ItemController : MonoBehaviour
 {
     public Sprite itemIcon;
     public string itemId;
+    public ItemID itemID;
 
     void OnMouseDown()
     {
@@ -16,5 +18,11 @@ public class ItemPickup : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    // new
+    public void ItemClicked() {
+        InventoryController.Instance.AddItem(itemID);
+        this.gameObject.SetActive(false);
     }
 }

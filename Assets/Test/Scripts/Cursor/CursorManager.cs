@@ -34,16 +34,12 @@ public class CursorManager : MonoBehaviour
                 var item = clickObject.GetComponent<Item>(); 
                 item?.ItemClicked();
                 break;
-            //case "PuzzleTrigger":
-            //    var PuzzleTrigger = clickObject.GetComponent<PuzzleTrigger>();
-            //    PuzzleTrigger?.OnClick();
-            //    PuzzleTrigger?.Disable();
-            //    break;
-            //case "PuzzleItem":
-            //    var Puzzleitem = clickObject.GetComponent<PuzzleItem>();
-            //    Puzzleitem?.OnClick();
-            //    break;
-            
+            case "ItemController":
+                var itemController = clickObject.GetComponent<ItemController>();
+                itemController?.ItemClicked();
+                break;
+
+
         }
     }
 

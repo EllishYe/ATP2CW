@@ -858,6 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   itemIcon: {fileID: 8307180363268045459, guid: 9fc4298716a921440a0b13a094179cce, type: 3}
   itemId: 1.2
+  itemID: 2
 --- !u!1 &301220487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   itemIcon: {fileID: -743675659880701158, guid: 1147c18d0bc7fd241b2ca4fdf299f0d7, type: 3}
   itemId: 1.3
+  itemID: 3
 --- !u!1 &626725388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,6 +2743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   itemIcon: {fileID: 8606952676598786282, guid: 56f7ef6b95aecb148ae805e78ac43007, type: 3}
   itemId: 1.1
+  itemID: 1
 --- !u!1 &1802759779
 GameObject:
   m_ObjectHideFlags: 0

@@ -2308,8 +2308,9 @@ GameObject:
   - component: {fileID: 1914343710}
   - component: {fileID: 1914343709}
   - component: {fileID: 1914343711}
+  - component: {fileID: 1914343712}
   m_Layer: 0
-  m_Name: InventoryManager
+  m_Name: InventoryController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2322,7 +2323,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914343708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caffabad4796b244a8d3c384398cafe8, type: 3}
   m_Name: 
@@ -2361,6 +2362,19 @@ MonoBehaviour:
   - {fileID: 1916192284}
   - {fileID: 142584135}
   inventoryButton: {fileID: 1269524520}
+--- !u!114 &1914343712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914343708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1fc356f1bdc5241805b641ebd5960c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryController
+  itemList: 
 --- !u!1 &1916192282
 GameObject:
   m_ObjectHideFlags: 0

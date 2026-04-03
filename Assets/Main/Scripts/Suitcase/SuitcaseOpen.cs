@@ -10,13 +10,13 @@ public class SuitcaseOpen : MonoBehaviour
     [Header("Awake State")]
     public bool startOpen = false;
 
-    // 查找的子物品（带 ItemPickup 组件）
-    private List<ItemPickup> childItems = new List<ItemPickup>();
+    // 查找的子物品（带 ItemController 组件）
+    private List<ItemController> childItems = new List<ItemController>();
 
     void Awake()
     {
-        // 收集所有子 ItemPickup（包括未激活的）
-        var items = GetComponentsInChildren<ItemPickup>(true);
+        // 收集所有子 ItemController（包括未激活的）
+        var items = GetComponentsInChildren<ItemController>(true);
         childItems.Clear();
         childItems.AddRange(items);
     }
