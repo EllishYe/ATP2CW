@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     // Room1 states
     public bool GetCodeinRoom1_T1 = false;
-    // ±ê¼Ç£ºSuitcase µÄËøÊÇ·ñÒÑ±»½â¿ª£¨½â¿ªºó²»ÔÙÏÔÊ¾ÃÜÂëÃæ°å£©
+    // æ ‡è®°ï¼šSuitcase çš„é”æ˜¯å¦å·²è¢«è§£å¼€ï¼ˆè§£å¼€åä¸å†æ˜¾ç¤ºå¯†ç é¢æ¿ï¼‰
     public bool suitcaseUnlocked = false;
 
     // Room1 Puzzles states
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public bool[] puzzleCompleted = new bool[4];
     public int?[] code = new int?[4];
 
-    // ÒÑ±»Ê°È¡²¢Ó¦ÔÚ³¡¾°¼ä±£ÁôµÄÎïÆ· ID ¼¯ºÏ£¨ÔËĞĞÊ±³Ö¾Ã£¬GameManager Ê¹ÓÃ DontDestroyOnLoad£©
+    // å·²è¢«æ‹¾å–å¹¶åº”åœ¨åœºæ™¯é—´ä¿ç•™çš„ç‰©å“ ID é›†åˆï¼ˆè¿è¡Œæ—¶æŒä¹…ï¼ŒGameManager ä½¿ç”¨ DontDestroyOnLoadï¼‰
     private HashSet<string> pickedItemIds = new HashSet<string>();
 
     
@@ -33,16 +33,16 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    // ±ê¼ÇÎïÆ·ÎªÒÑÊ°È¡
+    // æ ‡è®°ç‰©å“ä¸ºå·²æ‹¾å–
     public void MarkItemPicked(string id)
     {
         if (string.IsNullOrEmpty(id)) return;
         pickedItemIds.Add(id);
     }
-    // ¼ì²éÎïÆ·ÊÇ·ñÒÑ±»Ê°È¡
+    // æ£€æŸ¥ç‰©å“æ˜¯å¦å·²è¢«æ‹¾å–
     public bool IsItemPicked(string id)
     {
-        if (string.IsNullOrEmpty(id)) return true; // Ã»ÓĞ id µÄÎïÆ·ÊÓÎª²»¿ÉÖØ¸´Ê°È¡
+        if (string.IsNullOrEmpty(id)) return true; // æ²¡æœ‰ id çš„ç‰©å“è§†ä¸ºä¸å¯é‡å¤æ‹¾å–
         return pickedItemIds.Contains(id);
     }
 }

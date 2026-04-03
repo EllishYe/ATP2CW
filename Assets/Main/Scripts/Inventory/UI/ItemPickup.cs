@@ -9,7 +9,7 @@ public class ItemPickup : MonoBehaviour
     {
         InventorySlotManager.Instance.AddItem(itemIcon);
 
-        // ±ê¼ÇÎªÒÑÊ°È¡£¨ÓÃÓÚ¿ç³¡¾°±£Áô£©
+        // æ ‡è®°ä¸ºå·²æ‹¾å–ï¼ˆç”¨äºè·¨åœºæ™¯ä¿ç•™ï¼‰
         if (GameManager.Instance != null)
         {
             GameManager.Instance.MarkItemPicked(itemId);
