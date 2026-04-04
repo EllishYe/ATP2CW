@@ -15,5 +15,13 @@ MonoBehaviour:
   itemDetailsList:
   - itemID: 1
     inventoryIcon: {fileID: 0}
-    frontSprite: {fileID: 0}
-    backSprite: {fileID: 0}
+    frontSprite: {fileID: -4154837484666775976, guid: d2f1d44e2e043c24f87538ca87c43203, type: 3}
+    backSprite: {fileID: 8758568717781014408, guid: a6558b043b5038843b38cf56ad3c1a85, type: 3}
+  - itemID: 2
+    inventoryIcon: {fileID: 0}
+    frontSprite: {fileID: -1537094123362371335, guid: 5241ae0149e85ca4db5d20d715475e7b, type: 3}
+    backSprite: {fileID: -7666682258879262268, guid: 303877bbabc0f9e45b3585b5e696cc20, type: 3}
+  - itemID: 3
+    inventoryIcon: {fileID: 0}
+    frontSprite: {fileID: -774860801760781864, guid: 79f625b19b3d9d645a718e59e79d69ce, type: 3}
+    backSprite: {fileID: -8053572751226082373, guid: a54893e30a9387946aafc21c9ec8472c, type: 3}

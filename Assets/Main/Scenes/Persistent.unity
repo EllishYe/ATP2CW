@@ -407,7 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 362439151}
-  - component: {fileID: 362439150}
+  - component: {fileID: 362439152}
   m_Layer: 0
   m_Name: SceneTransitionManager
   m_TagString: Untagged
@@ -415,20 +415,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &362439150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362439149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c54113d5e999e4d8feb04f46d6f82f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionManager
-  fadeCanvasGroup: {fileID: 993502787}
-  fadeDuration: 0.2
 --- !u!4 &362439151
 Transform:
   m_ObjectHideFlags: 0
@@ -444,6 +430,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362439152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362439149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6f772838ddbc249b3dea21b03c0214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionManager
+  fadeCanvasGroup: {fileID: 993502787}
+  fadeDuration: 0.2
 --- !u!1 &486012247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,8 +1405,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1240861001}
-  - component: {fileID: 1240861002}
   - component: {fileID: 1240861003}
+  - component: {fileID: 1240861004}
   m_Layer: 0
   m_Name: CursorManager
   m_TagString: Untagged
@@ -1429,18 +1429,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1240861002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240861000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad205a395e0a3c4c99e0520410642f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
 --- !u!114 &1240861003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1453,6 +1441,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bcf14b773b34174cacfcbe406da4596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickManager
+--- !u!114 &1240861004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240861000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b413d4f629c595540ab76d81df262b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
 --- !u!1 &1269524515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +2306,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1914343710}
-  - component: {fileID: 1914343709}
   - component: {fileID: 1914343711}
   - component: {fileID: 1914343712}
   m_Layer: 0
@@ -2316,20 +2315,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1914343709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914343708}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caffabad4796b244a8d3c384398cafe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  itemData: {fileID: 11400000, guid: c50836613cc64eb4c89d80dffa93aac1, type: 2}
-  itemList: 
 --- !u!4 &1914343710
 Transform:
   m_ObjectHideFlags: 0
@@ -2362,6 +2347,7 @@ MonoBehaviour:
   - {fileID: 1916192284}
   - {fileID: 142584135}
   inventoryButton: {fileID: 1269524520}
+  itemImage: {fileID: 0}
 --- !u!114 &1914343712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,6 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1fc356f1bdc5241805b641ebd5960c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryController
+  itemData: {fileID: 11400000, guid: a995011972c707a4e8f07882bd54656c, type: 2}
   itemList: 
 --- !u!1 &1916192282
 GameObject:

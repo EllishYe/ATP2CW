@@ -39,4 +39,14 @@ public class InventorySlotManager  : Singleton<InventorySlotManager>
     {
         slots[index].enabled = false;
     }
+
+
+    //private ItemDetails currentItem;
+    //public Image itemImage;
+    //public void SetItem(ItemDetails itemDetails) {
+    //    currentItem = itemDetails;
+    //    //itemImage.sprite = itemDetails.frontSprite;
+    //}
+
+    
 }

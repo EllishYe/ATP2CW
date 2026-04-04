@@ -1925,7 +1925,7 @@ GameObject:
   - component: {fileID: 599835615}
   - component: {fileID: 599835618}
   m_Layer: 0
-  m_Name: Teleport to H2
+  m_Name: Teleport to T2
   m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599835614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6fda85025996e74493a6e99cdf7d996, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ca12f30fd88994a8ee8debc559db19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Teleport
   sceneFrom:
