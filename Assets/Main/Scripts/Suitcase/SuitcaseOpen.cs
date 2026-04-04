@@ -11,12 +11,12 @@ public class SuitcaseOpen : MonoBehaviour
     public bool startOpen = false;
 
     // 查找的子物品（带 ItemController 组件）
-    private List<ItemController> childItems = new List<ItemController>();
+    private List<Item> childItems = new List<Item>();
 
     void Awake()
     {
         // 收集所有子 ItemController（包括未激活的）
-        var items = GetComponentsInChildren<ItemController>(true);
+        var items = GetComponentsInChildren<Item>(true);
         childItems.Clear();
         childItems.AddRange(items);
     }

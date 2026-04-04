@@ -14,6 +14,7 @@ public class InventoryController : Singleton<InventoryController>
         {
             itemList.Add(itemID);
             //TODO:¸üÐÂUIÏÔÊ¾
+            EventHandler.CallUpdateUIEvent(itemData.GetItemDetails(itemID), itemList.Count - 1);
         }
     }
 
