@@ -26,6 +26,15 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
+    // 只读属性，便于外部（例如 PuzzleItem）查询当前是否已解锁
+    public bool IsUnlocked
+    {
+        get
+        {
+            return GameManager.Instance != null && GameManager.Instance.puzzleUnlocked[puzzleIndex];
+        }
+    }
+
     public void UnlockPuzzle()
     {
         if (GameManager.Instance.puzzleCompleted[puzzleIndex])

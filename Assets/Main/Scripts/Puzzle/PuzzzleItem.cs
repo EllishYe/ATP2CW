@@ -30,10 +30,17 @@ public class PuzzleItem : MonoBehaviour
 
     public void OnClick()
     {
-        if (!GameManager.Instance.puzzleUnlocked[controller.puzzleIndex])
+
+        if (controller == null || GameManager.Instance == null)
             return;
 
-        if (GameManager.Instance.puzzleCompleted[controller.puzzleIndex])
+        if (!controller.IsUnlocked)
+        {
+            controller.UnlockPuzzle();
+            return;
+        }
+
+        if (!GameManager.Instance.puzzleUnlocked[controller.puzzleIndex])
             return;
 
         controller.OnItemCollected();
