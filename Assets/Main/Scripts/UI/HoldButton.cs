@@ -7,6 +7,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     [Header("UI")]
     public Image fillImage;
     public GameObject buttonRoot; // Parent object to hide button
+    
 
     [Header("Speed")]
     public float fillSpeed = 1f;
@@ -89,6 +90,7 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             gameObject.SetActive(true);
         }
+
     }
 
     #endregion
@@ -120,9 +122,14 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         // Hide the button after the effect
         if (buttonRoot != null)
+        {
             buttonRoot.SetActive(false);
-        else
+        }
+        else {
             gameObject.SetActive(false);
+        }
+            
     }
     #endregion
+
 }

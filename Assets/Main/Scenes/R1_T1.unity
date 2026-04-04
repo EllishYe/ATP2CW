@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1469744266}
+  persistentId: 
+  pieceIndex: 0
 --- !u!212 &27407596
 SpriteRenderer:
   serializedVersion: 2
@@ -1230,6 +1232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1469744266}
+  persistentId: 
+  pieceIndex: 0
 --- !u!61 &321629492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2231,6 +2235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1524861278}
+  persistentId: 
+  pieceIndex: 0
 --- !u!61 &742030408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2459,6 +2465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1469744266}
+  persistentId: 
+  pieceIndex: 0
 --- !u!212 &929610307
 SpriteRenderer:
   serializedVersion: 2
@@ -3364,6 +3372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1469744266}
+  persistentId: 
+  pieceIndex: 0
 --- !u!212 &1157821216
 SpriteRenderer:
   serializedVersion: 2
@@ -3653,6 +3663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1461772881}
+  persistentId: 
+  pieceIndex: 0
 --- !u!60 &1193231614
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4406,6 +4418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1524861278}
+  persistentId: 
+  pieceIndex: 0
 --- !u!61 &1432452798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4770,10 +4784,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 52697445}
   - {fileID: 1842923063}
   - {fileID: 1193231612}
   - {fileID: 2139044406}
+  - {fileID: 52697445}
   m_Father: {fileID: 1943946266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1461772881
@@ -4822,12 +4836,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1704996268}
   - {fileID: 321629489}
   - {fileID: 929610305}
   - {fileID: 1797188170}
   - {fileID: 27407594}
   - {fileID: 1157821214}
+  - {fileID: 1704996268}
   m_Father: {fileID: 1943946266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1469744266
@@ -4939,6 +4953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1967743007}
+  persistentId: 
+  pieceIndex: 0
 --- !u!212 &1519483710
 SpriteRenderer:
   serializedVersion: 2
@@ -5028,11 +5044,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1650755841}
   - {fileID: 1432452796}
   - {fileID: 742030406}
   - {fileID: 1650091223}
   - {fileID: 2001215305}
+  - {fileID: 1650755841}
   m_Father: {fileID: 1943946266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1524861278
@@ -5098,6 +5114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1524861278}
+  persistentId: 
+  pieceIndex: 0
 --- !u!61 &1650091225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5585,6 +5603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1469744266}
+  persistentId: 
+  pieceIndex: 0
 --- !u!212 &1797188172
 SpriteRenderer:
   serializedVersion: 2
@@ -5737,6 +5757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1461772881}
+  persistentId: 
+  pieceIndex: 0
 --- !u!60 &1842923065
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6381,8 +6403,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1137249693}
   - {fileID: 1519483707}
+  - {fileID: 1137249693}
   m_Father: {fileID: 1943946266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974814858
@@ -6523,6 +6545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1524861278}
+  persistentId: 
+  pieceIndex: 0
 --- !u!61 &2001215307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6675,6 +6699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
   controller: {fileID: 1461772881}
+  persistentId: 
+  pieceIndex: 0
 --- !u!60 &2139044408
 PolygonCollider2D:
   m_ObjectHideFlags: 0

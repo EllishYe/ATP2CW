@@ -21,4 +21,10 @@ public class SlotUI : MonoBehaviour
         itemImage.enabled = false;
     }
 
+    #region Public Methods
+    public ItemDetails GetItemDetails()
+    {
+        return currentItem;
+    }
+    #endregion
 }
