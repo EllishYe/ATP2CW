@@ -15,7 +15,7 @@ public class SuitcaseOpen : MonoBehaviour
 
     void Awake()
     {
-        // 收集所有子 ItemController（包括未激活的）
+        // 收集所有子 Item（包括未激活的）
         var items = GetComponentsInChildren<Item>(true);
         childItems.Clear();
         childItems.AddRange(items);
@@ -23,31 +23,36 @@ public class SuitcaseOpen : MonoBehaviour
 
     void Start()
     {
-        // 如果某些物品已在 GameManager 中标记为已拾取，则在场景加载时移除这些物件（确保跨场景一致）
+        // 如果某些物品已在 ObjectManager 或 GameManager 中标记为已拾取，则在场景加载时移除这些物件（确保跨场景一致）
         RemovePickedChildren();
-
-        // 根据 startOpen 设置初始显示
-        //SetOpen(startOpen);
     }
 
     // 打开或关闭 suitcase（控制子物件显示）
     public void SetOpen(bool open)
     {
-        //Debug.Log("1");
-        // 对 box：如果绑定则设置为 open（box 可随开关隐藏/显示）
         if (box != null)
         {
             box.SetActive(open);
         }
 
-        // 对其他子物品：若尚未被拾取，则根据 open 设置显示；若已被拾取则确保不存在
         foreach (var item in childItems)
         {
-            //Debug.Log("2");
             if (item == null || item.gameObject == null) continue;
 
-            // 若物品已被 GameManager 标记为拾取，则销毁该对象（可能在切回场景时重新实例化）
-            if (GameManager.Instance != null && GameManager.Instance.IsItemPicked(item.itemId))
+            // 优先使用全局的 ObjectManager（已修复为单一来源），若不存在再回退到旧的 GameManager 检查
+            bool isPicked = false;
+            if (ObjectManager.Instance != null)
+            {
+                // ObjectManager 使用 Item.itemID（枚举）为 key
+                isPicked = !ObjectManager.Instance.IsItemAvailable(item.itemID);
+            }
+            else if (GameManager.Instance != null)
+            {
+                // 兼容旧逻辑：GameManager 以 string id 记录
+                isPicked = GameManager.Instance.IsItemPicked(item.itemId);
+            }
+
+            if (isPicked)
             {
                 Destroy(item.gameObject);
                 continue;
@@ -59,7 +64,6 @@ public class SuitcaseOpen : MonoBehaviour
 
     public void Toggle()
     {
-        // 判断当前 box / 第一个子物的状态以决定切换方向
         bool currentlyOpen = true;
 
         if (box != null)
@@ -73,12 +77,21 @@ public class SuitcaseOpen : MonoBehaviour
     // 在场景开始时移除已被拾取的子物件（避免在切换场景后再次出现）
     void RemovePickedChildren()
     {
-        if (GameManager.Instance == null) return;
-
         foreach (var item in childItems.ToArray())
         {
             if (item == null) continue;
-            if (GameManager.Instance.IsItemPicked(item.itemId))
+
+            bool isPicked = false;
+            if (ObjectManager.Instance != null)
+            {
+                isPicked = !ObjectManager.Instance.IsItemAvailable(item.itemID);
+            }
+            else if (GameManager.Instance != null)
+            {
+                isPicked = GameManager.Instance.IsItemPicked(item.itemId);
+            }
+
+            if (isPicked)
             {
                 Destroy(item.gameObject);
             }

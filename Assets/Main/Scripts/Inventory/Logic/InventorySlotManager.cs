@@ -63,6 +63,7 @@ public class InventorySlotManager  : Singleton<InventorySlotManager>
         {
             currentIndex = index;
             slotUIs[index].SetItem(itemdetails);
+            
             // open inventory panel if it's closed
             if (inventoryButton != null)
             {

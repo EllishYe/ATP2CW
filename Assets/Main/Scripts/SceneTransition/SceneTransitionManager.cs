@@ -18,11 +18,17 @@ public class SceneTransitionManager : Singleton<SceneTransitionManager>
 
     public IEnumerator TransitionToScene(SceneField from, SceneField to) {
         yield return Fade(1);//Fade out
+
+        EventHandler.CallBeforeSceneUnloadEvent();
+
         yield return SceneManager.UnloadSceneAsync(from);
         yield return SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
         // Set the newly loaded scene as the active scene
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene(newScene);
+
+        EventHandler.CallAfterSceneLoadedEvent();
+
         yield return Fade(0);//Fade in 
     }
 
