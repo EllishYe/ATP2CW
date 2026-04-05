@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 /// <summary>
 /// Represents a UI drop zone that handles drag -and -drop interactions。
@@ -25,10 +26,13 @@ public class DropZone : MonoBehaviour, IDropHandler
 
                 if (details != null)
                 {
+
                     inspectManager.StartInspect(details);//将物件信息传给InspectManager
+
                 }
             }
             Debug.Log("Item Dropped");
         }
     }
+
 }

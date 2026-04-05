@@ -5,7 +5,16 @@ public class ScratchCardCanvasController : MonoBehaviour
 {
     public Image frontImage;
     public Image backImage;
+    CanvasGroup canvasGroup;
 
+    void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+    public void SetInteractable(bool value)
+    {
+        canvasGroup.blocksRaycasts = value;
+    }
     void Start() {
         Hide(frontImage);
         Hide(backImage);

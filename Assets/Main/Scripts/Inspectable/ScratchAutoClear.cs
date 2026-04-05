@@ -68,5 +68,8 @@ public class ScratchAutoClear : MonoBehaviour
             go.SetActive(false);
 
         triggered = true;
+        
+        //触发事件通知外部（InspectectManager）擦除已完成，可以进行下一步
+        EventHandler.CallScratchClearedEvent();
     }
 }

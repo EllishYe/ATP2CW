@@ -21,4 +21,20 @@ public static class EventHandler
     {
         AfterSceneLoadedEvent?.Invoke();
     }
+
+
+    #region Inspectry Events
+    public static event Action ScratchClearedEvent;
+    public static void CallScratchClearedEvent()
+    {
+        ScratchClearedEvent?.Invoke();
+    }
+
+    public static event Action ConfirmFinishedEvent;
+    public static void CallConfirmFinishedEvent()
+    {
+        ConfirmFinishedEvent?.Invoke();
+    }
+
+    #endregion
 }

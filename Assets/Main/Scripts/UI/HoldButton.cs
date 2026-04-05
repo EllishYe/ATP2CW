@@ -56,6 +56,8 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         Debug.Log("ButtonClicked");
 
         isHolding = false;
+        
+       
 
         StartCoroutine(PlayCompleteEffect());
     }
@@ -128,7 +130,8 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         else {
             gameObject.SetActive(false);
         }
-            
+        // Invoke the confirm finished event after hiding
+        EventHandler.CallConfirmFinishedEvent();
     }
     #endregion
 
