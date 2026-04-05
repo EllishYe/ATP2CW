@@ -82,6 +82,9 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         isHolding = false;
         progress = 0f;
 
+        // reset glow effect
+        isPlayingCompleteEffect = false;
+
         fillImage.fillAmount = 0f;
 
         if (buttonRoot != null)
@@ -132,6 +135,9 @@ public class HoldButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
         // Invoke the confirm finished event after hiding
         EventHandler.CallConfirmFinishedEvent();
+
+        // reset glow alpha for next time
+        isPlayingCompleteEffect = false;
     }
     #endregion
 

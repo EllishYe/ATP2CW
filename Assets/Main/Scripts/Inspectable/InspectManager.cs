@@ -84,7 +84,6 @@ public class InspectManager : MonoBehaviour
 
     public void OnDissolveFinished()
     {
-        //先将dissolveController控制的BackImage视觉隐藏掉，再重置里面的DissolveAmount参数以便下次使用
         fireController.TriggerBurn();
 
         //LockInput(false);
