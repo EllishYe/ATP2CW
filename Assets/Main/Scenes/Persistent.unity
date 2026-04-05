@@ -2085,7 +2085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394771792}
-  - component: {fileID: 1394771793}
+  - component: {fileID: 1394771794}
   m_Layer: 0
   m_Name: ---CanvasManager---
   m_TagString: Untagged
@@ -2111,7 +2111,7 @@ Transform:
   - {fileID: 998372099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1394771793
+--- !u!114 &1394771794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2120,11 +2120,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394771791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce8ea1fcad4b5b40b635951ea801b07, type: 3}
+  m_Script: {fileID: 11500000, guid: f0032ca727d4c2e4dbfad92169702a1a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventorySceneController
-  inventoryUI: {fileID: 1798509497}
-  hideInSceneName: R1_T1
+  m_EditorClassIdentifier: Assembly-CSharp::CanvasSceneController
+  entries:
+  - target: {fileID: 1798509497}
+    hideInScenes:
+    - m_SceneAsset: {fileID: 102900000, guid: 404277e2735aff64d80b1bc15356103b, type: 3}
+      m_SceneName: R1_T1
 --- !u!1 &1488320197
 GameObject:
   m_ObjectHideFlags: 0
