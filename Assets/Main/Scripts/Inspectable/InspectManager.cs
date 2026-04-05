@@ -43,7 +43,10 @@ public class InspectManager : MonoBehaviour
         currentItem = item;
 
         if (scratchManager != null)
+        {
+            scratchManager.ScratchSurfaceSprite = item.frontSprite;
             scratchManager.gameObject.SetActive(true);
+        }
 
         scratchCanvas.ReceiveItem(item);
         scratchCanvas.SetInteractable(false);

@@ -24,7 +24,7 @@ public class ScratchAutoClear : MonoBehaviour
 
     void OnEnable()
     {
-        // 每次启用时重置触发器并确保目标可见（保证下一次可再次触发）
+        // reset triggered state when enabled
         triggered = false;
 
         if (eraseProgress != null)
@@ -33,7 +33,7 @@ public class ScratchAutoClear : MonoBehaviour
             eraseProgress.OnCompleted += OnCompleted;
         }
 
-        // 确保前端目标在启用时可见（上一次可能被隐藏）
+        // make sure target is visible at start
         GameObject go = targetToHide;
         if (go == null && eraseProgress != null && eraseProgress.Card != null && eraseProgress.Card.SurfaceTransform != null)
             go = eraseProgress.Card.SurfaceTransform.gameObject;

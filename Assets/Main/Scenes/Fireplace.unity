@@ -724,8 +724,8 @@ GameObject:
   - component: {fileID: 702666876}
   - component: {fileID: 702666875}
   - component: {fileID: 702666874}
-  - component: {fileID: 702666878}
   - component: {fileID: 702666879}
+  - component: {fileID: 702666878}
   m_Layer: 0
   m_Name: ---ScratchCardCanvas---
   m_TagString: Untagged
@@ -1216,7 +1216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1242040005
 RectTransform:
   m_ObjectHideFlags: 0
