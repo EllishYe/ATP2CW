@@ -1,6 +1,7 @@
-using UnityEngine;
-using System.Collections;
 using ScratchCardAsset;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InspectManager : MonoBehaviour
 {
@@ -74,20 +75,40 @@ public class InspectManager : MonoBehaviour
 
     public void OnConfirmFinished()
     {
-        //LockInput(true); 开始禁用玩家输入
+        Debug.Log("Confirm Finished");
 
-        //InventorySlotManager.Instance.RemoveCurrentItem();在InventoryManager和InventorySlotManager中实现Data和UI的同步，移除当前物品
+        // Remove the item form inventory data and update UI
+        if (currentItem != null && InventoryController.Instance != null)
+        {
+            InventoryController.Instance.RemoveItem(currentItem.itemID);
+            currentItem = null;
+        }
 
-        dissolveController.PlayDissolve(); //将BackImage的Dissolve效果播放出来
+        dissolveController.PlayDissolve(); 
+
+        //LockInput(true); 
 
     }
 
     public void OnDissolveFinished()
     {
-        fireController.TriggerBurn();
-
         //LockInput(false);
-
-        //Debug.Log("Inspect Finished");
+        fireController.TriggerBurn();
+        Debug.Log("Inspect Finished");
     }
+
+    /*
+    public void LockInput(bool locked)
+    {
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.enabled = !locked;
+        }
+        else
+        {
+            Debug.LogWarning("No Event System found");
+        }
+    }
+    */
+
 }
