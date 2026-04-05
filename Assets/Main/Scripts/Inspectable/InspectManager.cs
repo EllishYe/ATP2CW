@@ -10,7 +10,7 @@ public class InspectManager : MonoBehaviour
     public DropZone dropzone;// Use Canvas
     public HoldButtonController confirmCanvas;// Confirm Canvas
     public ScratchCardCanvasController scratchCanvas;// Scratch Canvas
-    public ScratchCardManager scratchManager;
+    public ScratchCardManager scratchManager; // Scratch Manager
     public DissolveController dissolveController;// Dissolve Controller
     public FireInputTest fireController;// Fire Contoller
 
@@ -50,15 +50,15 @@ public class InspectManager : MonoBehaviour
 
         scratchCanvas.Show(scratchCanvas.frontImage);
         scratchCanvas.Show(scratchCanvas.backImage);
-
     }
-    
-    
 
     public void OnScratchFinished()
     {
-        if (scratchManager != null)
+        //reset scratch manager中关于front image的Erase Progress的数据方便下次使用
+        if (scratchManager != null) {
+            scratchManager.ClearScratchCard();
             scratchManager.gameObject.SetActive(false);
+        }
         confirmCanvas.ShowHoldButton();
     }
 
@@ -74,6 +74,7 @@ public class InspectManager : MonoBehaviour
 
     public void OnDissolveFinished()
     {
+        //先将dissolveController控制的BackImage视觉隐藏掉，再重置里面的DissolveAmount参数以便下次使用
         fireController.TriggerBurn();
 
         //LockInput(false);
