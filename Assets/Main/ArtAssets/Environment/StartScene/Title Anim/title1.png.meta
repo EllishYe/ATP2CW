@@ -1,43 +1,37 @@
 fileFormatVersion: 2
-guid: 88c2c8c516d7be642a827417089d472c
+guid: 834e1a097ea7eaf439ff7239837b98b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2924118864771949876
-    second: bubble1_0
+      213: 1910128136670386994
+    second: title1_0
   - first:
-      213: -3732652272692412109
-    second: bubble1_1
+      213: -2664518858461760817
+    second: title1_1
   - first:
-      213: -9039282671507449261
-    second: bubble1_2
+      213: 2591918509515616335
+    second: title1_2
   - first:
-      213: -2810046950351143220
-    second: bubble1_3
+      213: -8743592809460439699
+    second: title1_3
   - first:
-      213: 2256344506806986341
-    second: bubble1_4
+      213: -94961812691694057
+    second: title1_4
   - first:
-      213: 6276245661379741255
-    second: bubble1_5
+      213: -7359059615858423444
+    second: title1_5
   - first:
-      213: -60704656296001939
-    second: bubble1_6
+      213: -8260137336087791362
+    second: title1_6
   - first:
-      213: -8871878053390247086
-    second: bubble1_7
+      213: -8857840098283760982
+    second: title1_7
   - first:
-      213: 3834650101151516022
-    second: bubble1_8
+      213: -5591479397424043724
+    second: title1_8
   - first:
-      213: -9208722935635910122
-    second: bubble1_9
-  - first:
-      213: 7297550284361219926
-    second: bubble1_10
-  - first:
-      213: -1165373169062284571
-    second: bubble1_11
+      213: -3661028543851116088
+    second: title1_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -79,7 +73,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -159,123 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bubble1_0
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 402
-        width: 29
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43520c76d9e849820800000000000000
-      internalID: 2924118864771949876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubble1_1
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 399
-        width: 18
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3314d10d884f23cc0800000000000000
-      internalID: -3732652272692412109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubble1_2
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 44
-        width: 738
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35a547c6d440e8280800000000000000
-      internalID: -9039282671507449261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubble1_3
-      rect:
-        serializedVersion: 2
-        x: 737
-        y: 293
-        width: 29
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cce762adf25b009d0800000000000000
-      internalID: -2810046950351143220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubble1_4
-      rect:
-        serializedVersion: 2
-        x: 762
-        y: 302
-        width: 24
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5666223df55205f10800000000000000
-      internalID: 2256344506806986341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubble1_5
+      name: title1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 61
-        width: 38
-        height: 48
+        y: 37
+        width: 144
+        height: 365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74640a11d24b91750800000000000000
-      internalID: 6276245661379741255
+      spriteID: 23b97b58b63228a10800000000000000
+      internalID: 1910128136670386994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bubble1_6
+      name: title1_1
       rect:
         serializedVersion: 2
-        x: 13
-        y: 82
-        width: 33
-        height: 45
+        x: 122
+        y: 211
+        width: 145
+        height: 190
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6eb34dcf65582ff0800000000000000
-      internalID: -60704656296001939
+      spriteID: fc2be08273ab50bd0800000000000000
+      internalID: -2664518858461760817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bubble1_7
+      name: title1_2
       rect:
         serializedVersion: 2
-        x: 650
-        y: 7
-        width: 172
-        height: 146
+        x: 261
+        y: 204
+        width: 263
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,63 +212,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25b17196ae1c0e480800000000000000
-      internalID: -8871878053390247086
+      spriteID: f40307ed62858f320800000000000000
+      internalID: 2591918509515616335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bubble1_8
+      name: title1_3
       rect:
         serializedVersion: 2
-        x: 827
-        y: 108
-        width: 13
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6754d0d33f9673530800000000000000
-      internalID: 3834650101151516022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubble1_9
-      rect:
-        serializedVersion: 2
-        x: 839
-        y: 108
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 612ed6aa74b043080800000000000000
-      internalID: -9208722935635910122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubble1_10
-      rect:
-        serializedVersion: 2
-        x: 769
-        y: 0
-        width: 26
+        x: 542
+        y: 248
+        width: 29
         height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -394,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65fb6edc15b164560800000000000000
-      internalID: 7297550284361219926
+      spriteID: d6563735aa488a680800000000000000
+      internalID: -8743592809460439699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bubble1_11
+      name: title1_4
       rect:
         serializedVersion: 2
-        x: 792
-        y: 9
-        width: 67
-        height: 78
+        x: 585
+        y: 249
+        width: 25
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,8 +256,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e27543f643c3dfe0800000000000000
-      internalID: -1165373169062284571
+      spriteID: 71ec8470cb0aeaef0800000000000000
+      internalID: -94961812691694057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title1_5
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 19
+        width: 151
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6906d3f44e5fd990800000000000000
+      internalID: -7359059615858423444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title1_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 20
+        width: 133
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8bb8e5bd81e5d80800000000000000
+      internalID: -8260137336087791362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title1_7
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 141
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa2d5988c51a21580800000000000000
+      internalID: -8857840098283760982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title1_8
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 26
+        width: 163
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439ef9bec131762b0800000000000000
+      internalID: -5591479397424043724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title1_9
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 0
+        width: 172
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c94033bfe9613dc0800000000000000
+      internalID: -3661028543851116088
       vertices: []
       indices: 
       edges: []
@@ -426,7 +376,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -436,18 +386,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bubble1_0: 2924118864771949876
-      bubble1_1: -3732652272692412109
-      bubble1_10: 7297550284361219926
-      bubble1_11: -1165373169062284571
-      bubble1_2: -9039282671507449261
-      bubble1_3: -2810046950351143220
-      bubble1_4: 2256344506806986341
-      bubble1_5: 6276245661379741255
-      bubble1_6: -60704656296001939
-      bubble1_7: -8871878053390247086
-      bubble1_8: 3834650101151516022
-      bubble1_9: -9208722935635910122
+      title1_0: 1910128136670386994
+      title1_1: -2664518858461760817
+      title1_2: 2591918509515616335
+      title1_3: -8743592809460439699
+      title1_4: -94961812691694057
+      title1_5: -7359059615858423444
+      title1_6: -8260137336087791362
+      title1_7: -8857840098283760982
+      title1_8: -5591479397424043724
+      title1_9: -3661028543851116088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

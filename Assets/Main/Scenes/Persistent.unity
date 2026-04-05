@@ -2128,6 +2128,12 @@ MonoBehaviour:
     hideInScenes:
     - m_SceneAsset: {fileID: 102900000, guid: 404277e2735aff64d80b1bc15356103b, type: 3}
       m_SceneName: R1_T1
+    - m_SceneAsset: {fileID: 102900000, guid: 89033b8a842fcb549b8bc5720098afea, type: 3}
+      m_SceneName: StartScene
+  - target: {fileID: 998372098}
+    hideInScenes:
+    - m_SceneAsset: {fileID: 102900000, guid: 89033b8a842fcb549b8bc5720098afea, type: 3}
+      m_SceneName: StartScene
 --- !u!1 &1488320197
 GameObject:
   m_ObjectHideFlags: 0
