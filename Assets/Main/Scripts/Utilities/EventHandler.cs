@@ -36,5 +36,12 @@ public static class EventHandler
         ConfirmFinishedEvent?.Invoke();
     }
 
+
+    public static event Action DissolveFinishedEvent;
+    public static void CallDissolveFinishedEvent()
+    {
+        DissolveFinishedEvent?.Invoke();
+    }
+
     #endregion
 }

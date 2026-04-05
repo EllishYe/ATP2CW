@@ -21,11 +21,13 @@ public class InspectManager : MonoBehaviour
     {
         EventHandler.ScratchClearedEvent += OnScratchCleared_Event;
         EventHandler.ConfirmFinishedEvent += OnConfirmFinished_Event;
+        EventHandler.DissolveFinishedEvent += OnDissolveFinished_Event;
     }
     void OnDisable()
     {
         EventHandler.ScratchClearedEvent -= OnScratchCleared_Event;
         EventHandler.ConfirmFinishedEvent -= OnConfirmFinished_Event;
+        EventHandler.DissolveFinishedEvent -= OnDissolveFinished_Event;
     }
     void OnScratchCleared_Event()
     {
@@ -34,6 +36,11 @@ public class InspectManager : MonoBehaviour
     void OnConfirmFinished_Event()
     {
         OnConfirmFinished();
+    }
+
+    void OnDissolveFinished_Event()
+    {
+        OnDissolveFinished();
     }
     #endregion
 
@@ -57,7 +64,7 @@ public class InspectManager : MonoBehaviour
 
     public void OnScratchFinished()
     {
-        //reset scratch manager中关于front image的Erase Progress的数据方便下次使用
+        //reset scratch manager's Erase Progress of front image
         if (scratchManager != null) {
             scratchManager.ClearScratchCard();
             scratchManager.gameObject.SetActive(false);

@@ -23,6 +23,7 @@ public class DissolveController : MonoBehaviour
         {
             runtimeMat = Instantiate(targetImage.material);
             targetImage.material = runtimeMat;
+            runtimeMat.SetFloat(dissolveProperty, 0f);
         }
     }
 
@@ -56,9 +57,10 @@ public class DissolveController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         targetImage.gameObject.SetActive(false);
+        runtimeMat.SetFloat(dissolveProperty, 0f);
 
         // Notify InspectManager
-        FindObjectOfType<InspectManager>().OnDissolveFinished();
+        EventHandler.CallDissolveFinishedEvent();
     }
 
 }
