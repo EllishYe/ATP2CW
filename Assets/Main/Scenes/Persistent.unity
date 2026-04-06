@@ -2132,12 +2132,6 @@ MonoBehaviour:
       m_SceneName: StartScene
     - m_SceneAsset: {fileID: 102900000, guid: a5b46e8801a18c74d9a7bbe6233b1fc8, type: 3}
       m_SceneName: IntroScene
-  - target: {fileID: 998372098}
-    hideInScenes:
-    - m_SceneAsset: {fileID: 102900000, guid: 89033b8a842fcb549b8bc5720098afea, type: 3}
-      m_SceneName: StartScene
-    - m_SceneAsset: {fileID: 102900000, guid: a5b46e8801a18c74d9a7bbe6233b1fc8, type: 3}
-      m_SceneName: IntroScene
 --- !u!1 &1488320197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,7 +2543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1798509498
 MonoBehaviour:
   m_ObjectHideFlags: 0

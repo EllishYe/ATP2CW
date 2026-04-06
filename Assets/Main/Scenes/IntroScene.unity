@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 1460896329}
   - component: {fileID: 1460896330}
   m_Layer: 0
-  m_Name: Teleport to Fp
+  m_Name: Teleport to R1_T2
   m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +379,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6947478937335038430, guid: 5e9d46cabcd6cc7479cbe5bc813c9a35, type: 3}
+  m_Sprite: {fileID: -8170421911963575995, guid: 3df9971194d28a04e9d07bb21b980bf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
