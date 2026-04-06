@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,9 +19,16 @@ public class CanvasSceneController : MonoBehaviour
     [Tooltip("为每个要受场景隐藏/显示控制的对象添加一个条目。")]
     public List<Entry> entries = new List<Entry>();
 
+    // 标志：是否已经通过 OnSceneLoaded 收到场景加载回调（用于防止 Start 覆盖 OnSceneLoaded 设置）
+    private bool _hasReceivedSceneLoaded = false;
+
     void Start()
     {
-        ApplyState(SceneManager.GetActiveScene());
+        // 如果尚未收到任何 sceneLoaded 回调，延迟一帧再应用状态以避免与同帧的 OnSceneLoaded/其它初始化冲突
+        if (!_hasReceivedSceneLoaded)
+        {
+            StartCoroutine(DelayedApplyOneFrame());
+        }
     }
 
     void OnEnable()
@@ -35,6 +43,16 @@ public class CanvasSceneController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        _hasReceivedSceneLoaded = true;
+        ApplyState(scene);
+    }
+
+    IEnumerator DelayedApplyOneFrame()
+    {
+        yield return null; // 等一帧，等待所有 Awake/Start/sceneLoaded（若发生）先执行
+        if (_hasReceivedSceneLoaded) yield break;
+
+        var scene = SceneManager.GetActiveScene();
         ApplyState(scene);
     }
 
@@ -44,16 +62,13 @@ public class CanvasSceneController : MonoBehaviour
 
         string currentSceneName = scene.name;
 
-        foreach (var entry in entries)
+        for (int i = 0; i < entries.Count; i++)
         {
+            var entry = entries[i];
             if (entry == null) continue;
 
             var go = entry.target;
-            if (go == null)
-            {
-                Debug.LogWarning($"CanvasSceneController: 条目 target 未绑定，跳过。");
-                continue;
-            }
+            if (go == null) continue;
 
             bool shouldHide = false;
             if (entry.hideInScenes != null)
@@ -61,7 +76,6 @@ public class CanvasSceneController : MonoBehaviour
                 foreach (var sf in entry.hideInScenes)
                 {
                     if (sf == null) continue;
-                    // SceneField 支持隐式转换为 string，也可以使用 sf.SceneName
                     if (currentSceneName == sf.SceneName)
                     {
                         shouldHide = true;
