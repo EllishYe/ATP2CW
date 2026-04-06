@@ -22,5 +22,6 @@ public class EntryManager : MonoBehaviour
     public void OnZoomFinished()
     {
         door.OpenDoor();
+        //isTransitioning = false;
     }
 }
