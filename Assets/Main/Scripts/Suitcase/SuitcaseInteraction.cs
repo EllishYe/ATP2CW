@@ -6,6 +6,7 @@ public class SuitcaseInteraction : MonoBehaviour, IPointerClickHandler
 {
     public GameObject lockContentsContainer;
     public SuitcaseOpen suitcaseOpen;
+    public GameObject hintbubble;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -13,7 +14,7 @@ public class SuitcaseInteraction : MonoBehaviour, IPointerClickHandler
         OnSuitcaseClicked();
     }
 
-    // 让子对象的转发器或外部代码也能调用（不依赖 EventData）
+    // 子对象的转发器或外部代码也能调用（不依赖 EventData）
     public void OnSuitcaseClicked()
     {
         if (GameManager.Instance == null) return;
@@ -22,6 +23,13 @@ public class SuitcaseInteraction : MonoBehaviour, IPointerClickHandler
         if (!GameManager.Instance.GetCodeinRoom1_T1)
         {
             Debug.Log("Suitcase: 还未获得房间密码，无法打开。");
+            //改成显示LockCanvas
+            if (lockContentsContainer != null)
+            {
+                lockContentsContainer.SetActive(true);
+            }
+            //并且显示提示的Bubble
+            hintbubble.SetActive(true);
             return;
         }
 
