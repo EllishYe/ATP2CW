@@ -1262,7 +1262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &998372099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2132,6 +2132,12 @@ MonoBehaviour:
       m_SceneName: StartScene
     - m_SceneAsset: {fileID: 102900000, guid: a5b46e8801a18c74d9a7bbe6233b1fc8, type: 3}
       m_SceneName: IntroScene
+  - target: {fileID: 998372098}
+    hideInScenes:
+    - m_SceneAsset: {fileID: 102900000, guid: 89033b8a842fcb549b8bc5720098afea, type: 3}
+      m_SceneName: StartScene
+    - m_SceneAsset: {fileID: 102900000, guid: a5b46e8801a18c74d9a7bbe6233b1fc8, type: 3}
+      m_SceneName: IntroScene
 --- !u!1 &1488320197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2282,8 @@ GameObject:
   - component: {fileID: 1653176440}
   - component: {fileID: 1653176439}
   - component: {fileID: 1653176438}
+  - component: {fileID: 1653176442}
+  - component: {fileID: 1653176441}
   m_Layer: 0
   m_Name: QuitButton
   m_TagString: Teleport
@@ -2345,7 +2353,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1653176439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1653176441}
+        m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
+        m_MethodName: QuitToStartScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1653176439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2384,6 +2404,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653176436}
   m_CullTransparentMesh: 1
+--- !u!114 &1653176441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653176436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e785588f2cc50d744961c2d1706e1226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuitButton
+  sceneTo:
+    m_SceneAsset: {fileID: 102900000, guid: 89033b8a842fcb549b8bc5720098afea, type: 3}
+    m_SceneName: StartScene
+--- !u!114 &1653176442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653176436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ca12f30fd88994a8ee8debc559db19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleport
+  sceneFrom:
+    m_SceneAsset: {fileID: 0}
+    m_SceneName: 
+  sceneTo:
+    m_SceneAsset: {fileID: 0}
+    m_SceneName: 
 --- !u!1 &1666697316
 GameObject:
   m_ObjectHideFlags: 0
