@@ -1111,6 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraEventRelay
   entryManager: {fileID: 585123763}
+  openSound: {fileID: 8300000, guid: 6e6b6698c753d3c4a9f0fb716bbefb4e, type: 3}
 --- !u!1 &1134187077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1124,7 @@ GameObject:
   - component: {fileID: 1134187081}
   - component: {fileID: 1134187080}
   - component: {fileID: 1134187079}
+  - component: {fileID: 1134187082}
   m_Layer: 5
   m_Name: Start_Button
   m_TagString: Untagged
@@ -1207,6 +1209,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1134187082}
+        m_TargetAssemblyTypeName: ClickableItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1134187080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,6 +1259,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134187077}
   m_CullTransparentMesh: 1
+--- !u!114 &1134187082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134187077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: dacfa5f5e34a2cb49ac190f16f4ad8f4, type: 3}
+  volume: 0.5
 --- !u!1 &1272644245
 GameObject:
   m_ObjectHideFlags: 0

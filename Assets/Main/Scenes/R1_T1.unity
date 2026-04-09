@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintTrigger
   hintBubble: {fileID: 1929184194}
+  clickSound: {fileID: 987490056}
 --- !u!61 &37287603
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1047,6 +1048,7 @@ GameObject:
   - component: {fileID: 270059057}
   - component: {fileID: 270059056}
   - component: {fileID: 270059055}
+  - component: {fileID: 270059059}
   m_Layer: 5
   m_Name: ' Button to T2'
   m_TagString: Untagged
@@ -1147,6 +1149,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 270059059}
+        m_TargetAssemblyTypeName: ClickableItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &270059057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1185,6 +1199,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270059053}
   m_CullTransparentMesh: 1
+--- !u!114 &270059059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270059053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: 952818e81cc8b3c40aed5135eac5c120, type: 3}
+  volume: 0.3
 --- !u!1 &315795900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,6 +1259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintTrigger
   hintBubble: {fileID: 925156213}
+  clickSound: {fileID: 987490056}
 --- !u!61 &315795903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2068,6 +2097,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484411872}
   m_CullTransparentMesh: 1
+--- !u!1 &544931290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 544931291}
+  - component: {fileID: 544931292}
+  m_Layer: 0
+  m_Name: SolveSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &544931291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544931290}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2023674351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &544931292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544931290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: 6344348d5d6f3d94aa3204ae29e84aa2, type: 3}
+  volume: 0.3
 --- !u!1 &599835614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,6 +2368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintTrigger
   hintBubble: {fileID: 256898960}
+  clickSound: {fileID: 987490056}
 --- !u!61 &730100433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2493,6 +2569,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &833490736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833490737}
+  - component: {fileID: 833490738}
+  m_Layer: 0
+  m_Name: UnlockSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833490737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833490736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2023674351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833490738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833490736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: 99668d0d9cfb61d4e97f7bc9bcd42842, type: 3}
+  volume: 0.5
 --- !u!1 &925156213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,6 +2936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintTrigger
   hintBubble: {fileID: 1654355967}
+  clickSound: {fileID: 987490056}
 --- !u!61 &984228771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2869,6 +2992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 987490055}
+  - component: {fileID: 987490056}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -2897,6 +3021,20 @@ Transform:
   - {fileID: 37287601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &987490056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987490054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: 7fca813d49e7f4c4cae244b07e8fdef5, type: 3}
+  volume: 0.5
 --- !u!1 &1002148930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4476,6 +4614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintTrigger
   hintBubble: {fileID: 181154570}
+  clickSound: {fileID: 987490056}
 --- !u!61 &1432221134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4722,6 +4861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintTrigger
   hintBubble: {fileID: 1350493230}
+  clickSound: {fileID: 987490056}
 --- !u!61 &1453677446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4957,6 +5097,9 @@ MonoBehaviour:
   codeNumber: 3
   hintBubble: {fileID: 328675145}
   codeUI: {fileID: 369970464}
+  unlockSound: {fileID: 833490738}
+  clickSound: {fileID: 1766995968}
+  solveSound: {fileID: 544931292}
 --- !u!1 &1469744264
 GameObject:
   m_ObjectHideFlags: 0
@@ -5011,6 +5154,9 @@ MonoBehaviour:
   codeNumber: 5
   hintBubble: {fileID: 1856379047}
   codeUI: {fileID: 369970464}
+  unlockSound: {fileID: 833490738}
+  clickSound: {fileID: 1766995968}
+  solveSound: {fileID: 544931292}
 --- !u!1 &1519483706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5218,6 +5364,9 @@ MonoBehaviour:
   codeNumber: 4
   hintBubble: {fileID: 462177756}
   codeUI: {fileID: 369970464}
+  unlockSound: {fileID: 833490738}
+  clickSound: {fileID: 1766995968}
+  solveSound: {fileID: 544931292}
 --- !u!1 &1650091222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5707,6 +5856,52 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.194361, y: 4.6842995}
   m_EdgeRadius: 0
+--- !u!1 &1766995966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766995967}
+  - component: {fileID: 1766995968}
+  m_Layer: 0
+  m_Name: ClickSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766995967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766995966}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2023674351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1766995968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766995966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: cbe1e2804e1e9264498ba5e4c7c387eb, type: 3}
+  volume: 0.3
 --- !u!1 &1797188169
 GameObject:
   m_ObjectHideFlags: 0
@@ -6608,6 +6803,7 @@ Transform:
   - {fileID: 1524861277}
   - {fileID: 1469744265}
   - {fileID: 1461772880}
+  - {fileID: 2023674351}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967743006
@@ -6643,6 +6839,9 @@ MonoBehaviour:
   codeNumber: 8
   hintBubble: {fileID: 1018249194}
   codeUI: {fileID: 369970464}
+  unlockSound: {fileID: 833490738}
+  clickSound: {fileID: 1766995968}
+  solveSound: {fileID: 544931292}
 --- !u!4 &1967743008
 Transform:
   m_ObjectHideFlags: 0
@@ -6905,6 +7104,40 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &2023674350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2023674351}
+  m_Layer: 0
+  m_Name: PuzzleSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2023674351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023674350}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 833490737}
+  - {fileID: 1766995967}
+  - {fileID: 544931291}
+  m_Father: {fileID: 1943946266}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139044405
 GameObject:
   m_ObjectHideFlags: 0

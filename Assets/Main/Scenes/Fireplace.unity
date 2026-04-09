@@ -725,6 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587140235}
   - component: {fileID: 587140234}
+  - component: {fileID: 587140236}
   m_Layer: 0
   m_Name: InspectManager
   m_TagString: Untagged
@@ -750,6 +751,7 @@ MonoBehaviour:
   scratchManager: {fileID: 349970301}
   dissolveController: {fileID: 1011767520}
   fireController: {fileID: 1855981683}
+  scratchShowSound: {fileID: 587140236}
 --- !u!4 &587140235
 Transform:
   m_ObjectHideFlags: 0
@@ -765,6 +767,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 618994990}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &587140236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587140233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: 77f219291664d7b4387998c2bbd2e25f, type: 3}
+  volume: 0.5
 --- !u!1 &618994989
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +831,7 @@ GameObject:
   - component: {fileID: 678370647}
   - component: {fileID: 678370646}
   - component: {fileID: 678370645}
+  - component: {fileID: 678370649}
   m_Layer: 5
   m_Name: Button to R1_T2
   m_TagString: Untagged
@@ -915,6 +932,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 678370649}
+        m_TargetAssemblyTypeName: ClickableItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &678370647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +982,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678370643}
   m_CullTransparentMesh: 1
+--- !u!114 &678370649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678370643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: dacfa5f5e34a2cb49ac190f16f4ad8f4, type: 3}
+  volume: 0.5
 --- !u!1 &687637883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011767519}
   - component: {fileID: 1011767520}
+  - component: {fileID: 1011767521}
   m_Layer: 0
   m_Name: DissolveController
   m_TagString: Untagged
@@ -1429,6 +1473,21 @@ MonoBehaviour:
   targetImage: {fileID: 2042475599}
   dissolveProperty: _DissolveAmount
   duration: 2
+  dissolveSound: {fileID: 1011767521}
+--- !u!114 &1011767521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011767518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: 92f8e9065b805074cb853b94cb1c7ce6, type: 3}
+  volume: 0.5
 --- !u!1 &1172063495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2342,7 @@ GameObject:
   - component: {fileID: 1855981685}
   - component: {fileID: 1855981684}
   - component: {fileID: 1855981683}
+  - component: {fileID: 1855981687}
   m_Layer: 0
   m_Name: FireController
   m_TagString: Untagged
@@ -2400,6 +2460,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855981687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855981682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce6f140ca0a1c84ea6d64b6f5559f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableItem
+  clickSound: {fileID: 8300000, guid: 8749c577fc6cf5f4e86afb14d5e969a2, type: 3}
+  volume: 0.5
 --- !u!1 &1926726730
 GameObject:
   m_ObjectHideFlags: 0

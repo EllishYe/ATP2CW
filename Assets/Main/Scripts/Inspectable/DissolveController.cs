@@ -15,6 +15,9 @@ public class DissolveController : MonoBehaviour
 
     private Material runtimeMat;
 
+    [Header("Timing")]
+    public ClickableItem dissolveSound;
+
 
     void Awake()
     {
@@ -32,6 +35,7 @@ public class DissolveController : MonoBehaviour
     {
         gameObject.SetActive(true);
         StartCoroutine(DissolveRoutine());
+        dissolveSound.OnClick();
     }
     #endregion
 

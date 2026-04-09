@@ -16,6 +16,7 @@ public class ScratchAutoClear : MonoBehaviour
 
     bool triggered = false;
 
+
     void Reset()
     {
         if (eraseProgress == null)

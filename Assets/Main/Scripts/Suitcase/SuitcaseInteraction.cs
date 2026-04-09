@@ -7,6 +7,7 @@ public class SuitcaseInteraction : MonoBehaviour, IPointerClickHandler
     public GameObject lockContentsContainer;
     public SuitcaseOpen suitcaseOpen;
     public GameObject hintbubble;
+    public ClickableItem clickableItem;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -17,6 +18,7 @@ public class SuitcaseInteraction : MonoBehaviour, IPointerClickHandler
     // 子对象的转发器或外部代码也能调用（不依赖 EventData）
     public void OnSuitcaseClicked()
     {
+        clickableItem.OnClick();
         if (GameManager.Instance == null) return;
 
         // 如果还未触发房间密码（无法交互）

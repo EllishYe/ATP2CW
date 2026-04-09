@@ -11,6 +11,11 @@ public class PuzzleController : MonoBehaviour
     int totalItems;
     int currentDone;
 
+    public ClickableItem unlockSound;
+    public ClickableItem clickSound;
+    public ClickableItem solveSound;
+
+
     void Start()
     {
         totalItems = GetComponentsInChildren<PuzzleItem>().Length;
@@ -40,13 +45,20 @@ public class PuzzleController : MonoBehaviour
         if (GameManager.Instance.puzzleCompleted[puzzleIndex])
             return;
 
+        bool wasUnlocked = GameManager.Instance.puzzleUnlocked[puzzleIndex];
+
         GameManager.Instance.puzzleUnlocked[puzzleIndex] = true;
         hintBubble.SetActive(true);
+        if (!wasUnlocked)
+        {
+            unlockSound.OnClick();
+        }
     }
 
     public void OnItemCollected()
     {
         currentDone++;
+        clickSound.OnClick();
 
         if (currentDone >= totalItems)
         {
@@ -63,5 +75,7 @@ public class PuzzleController : MonoBehaviour
         codeUI.SetCode(puzzleIndex, codeNumber);
 
         Debug.Log("Puzzle " + puzzleIndex + " Completed!");
+        
+        solveSound.OnClick();
     }
 }

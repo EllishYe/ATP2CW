@@ -14,6 +14,9 @@ public class InspectManager : MonoBehaviour
     public ScratchCardManager scratchManager; // Scratch Manager
     public DissolveController dissolveController;// Dissolve Controller
     public FireInputTest fireController;// Fire Contoller
+    
+    [Header("Audio")]
+    public ClickableItem scratchShowSound;
 
 
 
@@ -71,6 +74,7 @@ public class InspectManager : MonoBehaviour
             scratchManager.gameObject.SetActive(false);
         }
         confirmCanvas.ShowHoldButton();
+        scratchShowSound.OnClick();
     }
 
     public void OnConfirmFinished()

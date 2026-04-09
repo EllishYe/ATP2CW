@@ -18,6 +18,13 @@ public class LockManager : MonoBehaviour
     public Sprite imageBTN_on;// Correct password image
     private bool isPasswordCorrect = false;
 
+    //audio 
+    public ClickableItem rightSound;
+    public ClickableItem wrongSound;
+    public ClickableItem switchSound;
+
+
+
     public void CheckPassword()
     {
         int[] input = new int[4]
@@ -50,6 +57,7 @@ public class LockManager : MonoBehaviour
             }
             //OnUnlock();
             isPasswordCorrect = true;
+            switchSound.OnClick();
         }
         else
         {
@@ -62,6 +70,7 @@ public class LockManager : MonoBehaviour
 
     void OnUnlock()
     {
+        rightSound.OnClick();
         // 设置全局进度：Suitcase 已解锁（之后点击不再弹出密码界面）
         if (GameManager.Instance != null)
         {
@@ -86,7 +95,7 @@ public class LockManager : MonoBehaviour
 
     void OnFail()
     {
-        // TODO：fail feedback（抖动/红色闪烁）
+        wrongSound.OnClick();
     }
 
     public void OnOpenButtonPressed()
@@ -100,8 +109,7 @@ public class LockManager : MonoBehaviour
         {
             Debug.Log("OnClick:Password is WRONG");
 
-            // optional:fail feedback
-            //OnFail();
+            OnFail();
         }
     }
 }
