@@ -1951,7 +1951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &413571101
 Transform:
   m_ObjectHideFlags: 0
@@ -4401,13 +4401,14 @@ GameObject:
   - component: {fileID: 1193231612}
   - component: {fileID: 1193231615}
   - component: {fileID: 1193231614}
+  - component: {fileID: 1193231616}
   m_Layer: 0
   m_Name: dad_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1193231612
 Transform:
   m_ObjectHideFlags: 0
@@ -4550,6 +4551,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1193231616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193231611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563fdbc8cde94bf4d98b87a96ba536fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
+  controller: {fileID: 1461772881}
+  persistentId: 
+  pieceIndex: 0
 --- !u!1 &1193762678
 GameObject:
   m_ObjectHideFlags: 0
@@ -6180,7 +6196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1554057932
 Transform:
   m_ObjectHideFlags: 0
@@ -6364,7 +6380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1571711937
 Transform:
   m_ObjectHideFlags: 0
@@ -7376,13 +7392,14 @@ GameObject:
   - component: {fileID: 1842923063}
   - component: {fileID: 1842923066}
   - component: {fileID: 1842923065}
+  - component: {fileID: 1842923067}
   m_Layer: 0
   m_Name: boy_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1842923063
 Transform:
   m_ObjectHideFlags: 0
@@ -7520,6 +7537,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1842923067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842923062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563fdbc8cde94bf4d98b87a96ba536fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
+  controller: {fileID: 1461772881}
+  persistentId: 
+  pieceIndex: 0
 --- !u!1 &1856379047
 GameObject:
   m_ObjectHideFlags: 0
@@ -8355,13 +8387,14 @@ GameObject:
   - component: {fileID: 2139044406}
   - component: {fileID: 2139044409}
   - component: {fileID: 2139044408}
+  - component: {fileID: 2139044410}
   m_Layer: 0
   m_Name: mom_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2139044406
 Transform:
   m_ObjectHideFlags: 0
@@ -8496,6 +8529,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2139044410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139044405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563fdbc8cde94bf4d98b87a96ba536fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleItem
+  controller: {fileID: 1461772881}
+  persistentId: 
+  pieceIndex: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

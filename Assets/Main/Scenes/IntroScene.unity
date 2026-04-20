@@ -268,8 +268,8 @@ MonoBehaviour:
     m_SceneAsset: {fileID: 102900000, guid: a5b46e8801a18c74d9a7bbe6233b1fc8, type: 3}
     m_SceneName: IntroScene
   sceneTo:
-    m_SceneAsset: {fileID: 102900000, guid: 8782fcb4ffac5b7479288af85a70b8e8, type: 3}
-    m_SceneName: R1_T2
+    m_SceneAsset: {fileID: 102900000, guid: a1797e742c85122489ba1034a4306030, type: 3}
+    m_SceneName: Corridor
 --- !u!4 &292478449
 Transform:
   m_ObjectHideFlags: 0
