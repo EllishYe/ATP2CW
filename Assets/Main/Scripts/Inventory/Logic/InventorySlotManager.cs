@@ -6,7 +6,7 @@ public class InventorySlotManager  : Singleton<InventorySlotManager>
 {
     public InventoryButton inventoryButton;
 
-    // new 暂时缺少删除物件信息功能
+    // new 鏆傛椂缂哄皯鍒犻櫎鐗╀欢淇℃伅鍔熻兘
     public SlotUI[] slotUIs;
     public int currentIndex;
     private void OnEnable() {

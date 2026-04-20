@@ -4,7 +4,7 @@ public class EntryManager : MonoBehaviour
 {
     [Header("Refs")]
     public Animator cameraAnimator;
-    public GameObject startUI;     // Õû¸öUI£¨°´Å¥+±êÌâ£©
+    public GameObject startUI;     // æ•´ä¸ªUIï¼ˆæŒ‰é’®+æ ‡é¢˜ï¼‰
     public Door door;
 
     [Header("State")]

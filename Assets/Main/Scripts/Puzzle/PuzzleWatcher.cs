@@ -4,7 +4,7 @@ using System.Linq;
 [DisallowMultipleComponent]
 public class PuzzleWatcher : MonoBehaviour
 {
-    [Tooltip("µ±´ËÎïÌåÏÂËùÓĞ PuzzleController ¶ÔÓ¦µÄ puzzleCompleted È«Îª true Ê±£¬ÉèÖÃ GameManager.GetCodeinRoom1_T1 = true ²¢Êä³öÈÕÖ¾¡£")]
+    [Tooltip("å½“æ­¤ç‰©ä½“ä¸‹æ‰€æœ‰ PuzzleController å¯¹åº”çš„ puzzleCompleted å…¨ä¸º true æ—¶ï¼Œè®¾ç½® GameManager.GetCodeinRoom1_T1 = true å¹¶è¾“å‡ºæ—¥å¿—ã€‚")]
     public string debugMessage = "All puzzles in this group completed. GetCodeinRoom1_T1 set to true.";
 
     int[] puzzleIndices;
@@ -15,7 +15,7 @@ public class PuzzleWatcher : MonoBehaviour
         var pcs = GetComponentsInChildren<PuzzleController>(true);
         if (pcs == null || pcs.Length == 0)
         {
-            Debug.LogWarning($"{name}: Ã»ÓĞÔÚ×Ó¶ÔÏóÖĞÕÒµ½ PuzzleController¡£");
+            Debug.LogWarning($"{name}: æ²¡æœ‰åœ¨å­å¯¹è±¡ä¸­æ‰¾åˆ° PuzzleControllerã€‚");
             puzzleIndices = new int[0];
             return;
         }
@@ -29,11 +29,11 @@ public class PuzzleWatcher : MonoBehaviour
         if (puzzleIndices == null || puzzleIndices.Length == 0) return;
         if (GameManager.Instance == null) return;
 
-        // ¼ì²éËùÓĞË÷Òı¶ÔÓ¦µÄÍê³É×´Ì¬
+        // æ£€æŸ¥æ‰€æœ‰ç´¢å¼•å¯¹åº”çš„å®ŒæˆçŠ¶æ€
         bool allDone = true;
         foreach (int idx in puzzleIndices)
         {
-            // ·ÀÓùĞÔ¼ì²éË÷Òı·¶Î§
+            // é˜²å¾¡æ€§æ£€æŸ¥ç´¢å¼•èŒƒå›´
             if (idx < 0 || idx >= GameManager.Instance.puzzleCompleted.Length)
             {
                 allDone = false;

@@ -874,8 +874,8 @@ MonoBehaviour:
     m_SceneAsset: {fileID: 102900000, guid: 2364b79970010f8448cd2d446c5f37bb, type: 3}
     m_SceneName: Fireplace
   sceneTo:
-    m_SceneAsset: {fileID: 102900000, guid: 8782fcb4ffac5b7479288af85a70b8e8, type: 3}
-    m_SceneName: R1_T2
+    m_SceneAsset: {fileID: 102900000, guid: a1797e742c85122489ba1034a4306030, type: 3}
+    m_SceneName: Corridor
 --- !u!114 &678370646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1626,6 +1626,57 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -150}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1252668437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252668439}
+  - component: {fileID: 1252668438}
+  m_Layer: 0
+  m_Name: FireplaceEndingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1252668438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252668437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71f5f3e6d4d10e4eb48e0b9852d3534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FireplaceEndingManager
+  sceneFrom:
+    m_SceneAsset: {fileID: 102900000, guid: 2364b79970010f8448cd2d446c5f37bb, type: 3}
+    m_SceneName: Fireplace
+  sceneTo:
+    m_SceneAsset: {fileID: 102900000, guid: d2a2513088a0569459769a2d578ed7fa, type: 3}
+    m_SceneName: End
+  requiredFullCount: 3
+--- !u!4 &1252668439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252668437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 739.9717, y: 387.41406, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281168839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,3 +2894,4 @@ SceneRoots:
   - {fileID: 1926726735}
   - {fileID: 136461696}
   - {fileID: 1281168843}
+  - {fileID: 1252668439}

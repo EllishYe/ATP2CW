@@ -11,7 +11,7 @@ public class PuzzleItem : MonoBehaviour
 
     void Awake()
     {
-        // Èç¹ûÃ»ÓĞÊÖ¶¯ÉèÖÃ£¬Ôò¸ù¾İ puzzleIndex + pieceIndex ×Ô¶¯Éú³ÉÎÈ¶¨ ID
+        // å¦‚æœæ²¡æœ‰æ‰‹åŠ¨è®¾ç½®ï¼Œåˆ™æ ¹æ® puzzleIndex + pieceIndex è‡ªåŠ¨ç”Ÿæˆç¨³å®š ID
         if (string.IsNullOrEmpty(persistentId))
         {
             var pIndex = controller != null ? controller.puzzleIndex : -1;
@@ -21,7 +21,7 @@ public class PuzzleItem : MonoBehaviour
 
     void Start()
     {
-        // Æô¶¯Ê±Ñ¯ÎÊÈ«¾Ö¹ÜÀíÆ÷ÊÇ·ñÒÑ±»ÊÕ¼¯£¬ÈôÒÑÊÕ¼¯ÔòÒş²Ø£¨±ÜÃâÔÙ´Î³öÏÖ£©
+        // å¯åŠ¨æ—¶è¯¢é—®å…¨å±€ç®¡ç†å™¨æ˜¯å¦å·²è¢«æ”¶é›†ï¼Œè‹¥å·²æ”¶é›†åˆ™éšè—ï¼ˆé¿å…å†æ¬¡å‡ºç°ï¼‰
         if (ObjectManager.Instance != null && ObjectManager.Instance.IsPuzzleItemCollected(persistentId))
         {
             gameObject.SetActive(false);
@@ -46,7 +46,7 @@ public class PuzzleItem : MonoBehaviour
         controller.OnItemCollected();
         gameObject.SetActive(false);
 
-        // ½«ÊÕ¼¯×´Ì¬¼ÇÂ¼µ½È«¾Ö ObjectManager£¨³Ö¾Ã¿ç³¡¾°£©
+        // å°†æ”¶é›†çŠ¶æ€è®°å½•åˆ°å…¨å±€ ObjectManagerï¼ˆæŒä¹…è·¨åœºæ™¯ï¼‰
         if (ObjectManager.Instance != null)
             ObjectManager.Instance.MarkPuzzleItemCollected(persistentId);
     }

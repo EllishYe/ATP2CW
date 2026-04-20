@@ -3,7 +3,8 @@ using UnityEngine;
 public class PuzzleController : MonoBehaviour
 {
     public int puzzleIndex;        // 0~3
-    public int codeNumber;        // ¶ÔÓ¦ÃÜÂë
+    public int codeNumber;        // å¯¹åº”å¯†ç 
+    public int manualTotalItems = 0;
 
     public GameObject hintBubble;
     public CodeUI codeUI;
@@ -18,9 +19,12 @@ public class PuzzleController : MonoBehaviour
 
     void Start()
     {
-        totalItems = GetComponentsInChildren<PuzzleItem>().Length;
+        if (manualTotalItems > 0)
+            totalItems = manualTotalItems;
+        else
+            totalItems = GetComponentsInChildren<PuzzleItem>().Length;
 
-        // ¶ÁÈ¡´æµµ×´Ì¬
+        // è¯»å–å­˜æ¡£çŠ¶æ€
         if (GameManager.Instance.puzzleCompleted[puzzleIndex])
         {
             CompletePuzzle();
@@ -31,7 +35,7 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
-    // Ö»¶ÁÊôĞÔ£¬±ãÓÚÍâ²¿£¨ÀıÈç PuzzleItem£©²éÑ¯µ±Ç°ÊÇ·ñÒÑ½âËø
+    // åªè¯»å±æ€§ï¼Œä¾¿äºå¤–éƒ¨ï¼ˆä¾‹å¦‚ PuzzleItemï¼‰æŸ¥è¯¢å½“å‰æ˜¯å¦å·²è§£é”
     public bool IsUnlocked
     {
         get

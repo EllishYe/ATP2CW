@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 /// <summary>
-/// 物品拖拽组件，允许物品被拖动到DropZone中以触发交互
+/// 鐗╁搧鎷栨嫿缁勪欢锛屽厑璁哥墿鍝佽鎷栧姩鍒癉ropZone涓互瑙﹀彂浜や簰
 /// </summary>
 public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {

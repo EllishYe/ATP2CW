@@ -99,6 +99,11 @@ public class InspectManager : MonoBehaviour
         //LockInput(false);
         fireController.TriggerBurn();
         Debug.Log("Inspect Finished");
+        
+        if (FireplaceEndingManager.Instance != null)
+        {
+            FireplaceEndingManager.Instance.CheckBackpackProgress();
+        }
     }
 
     /*

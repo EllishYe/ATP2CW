@@ -35,4 +35,14 @@ public class InventoryController : Singleton<InventoryController>
 
         return true;
     }
+    
+    public int GetItemCount()
+    {
+        return itemList.Count;
+    }
+
+    public bool IsEmpty()
+    {
+        return itemList.Count == 0;
+    }
 }

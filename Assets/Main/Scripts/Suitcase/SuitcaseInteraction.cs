@@ -8,46 +8,51 @@ public class SuitcaseInteraction : MonoBehaviour, IPointerClickHandler
     public SuitcaseOpen suitcaseOpen;
     public GameObject hintbubble;
     public ClickableItem clickableItem;
+    public GameObject UI2glow;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // ±£³Ö¶Ô UI ÊÂ¼şµÄ¼æÈİ£¬¸´ÓÃÍ¬Ò»´¦Àíº¯Êı
+        // ä¿æŒå¯¹ UI äº‹ä»¶çš„å…¼å®¹ï¼Œå¤ç”¨åŒä¸€å¤„ç†å‡½æ•°
         OnSuitcaseClicked();
     }
 
-    // ×Ó¶ÔÏóµÄ×ª·¢Æ÷»òÍâ²¿´úÂëÒ²ÄÜµ÷ÓÃ£¨²»ÒÀÀµ EventData£©
+    // å­å¯¹è±¡çš„è½¬å‘å™¨æˆ–å¤–éƒ¨ä»£ç ä¹Ÿèƒ½è°ƒç”¨ï¼ˆä¸ä¾èµ– EventDataï¼‰
     public void OnSuitcaseClicked()
     {
         clickableItem.OnClick();
         if (GameManager.Instance == null) return;
 
-        // Èç¹û»¹Î´´¥·¢·¿¼äÃÜÂë£¨ÎŞ·¨½»»¥£©
+        // å¦‚æœè¿˜æœªè§¦å‘æˆ¿é—´å¯†ç ï¼ˆæ— æ³•äº¤äº’ï¼‰
         if (!GameManager.Instance.GetCodeinRoom1_T1)
         {
-            Debug.Log("Suitcase: »¹Î´»ñµÃ·¿¼äÃÜÂë£¬ÎŞ·¨´ò¿ª¡£");
-            //¸Ä³ÉÏÔÊ¾LockCanvas
+            Debug.Log("Suitcase: è¿˜æœªè·å¾—æˆ¿é—´å¯†ç ï¼Œæ— æ³•æ‰“å¼€ã€‚");
+            //æ”¹æˆæ˜¾ç¤ºLockCanvas
             if (lockContentsContainer != null)
             {
                 lockContentsContainer.SetActive(true);
             }
-            //²¢ÇÒÏÔÊ¾ÌáÊ¾µÄBubble
+            //å¹¶ä¸”æ˜¾ç¤ºæç¤ºçš„Bubble
             hintbubble.SetActive(true);
+            
+            // Display UI2glow at the same time
+            UI2glow.SetActive(true);
+            
             return;
         }
 
-        // Èç¹ûÉĞÎ´½âËø£¨µÚÒ»´ÎÔÊĞíÏÔÊ¾ÃÜÂë½çÃæ£©
+        // å¦‚æœå°šæœªè§£é”ï¼ˆç¬¬ä¸€æ¬¡å…è®¸æ˜¾ç¤ºå¯†ç ç•Œé¢ï¼‰
         if (!GameManager.Instance.suitcaseUnlocked)
         {
-            // ÏÔÊ¾ LockCanvas µÄ×ÓÏî£¨ÃÜÂë½çÃæ£©
+            // æ˜¾ç¤º LockCanvas çš„å­é¡¹ï¼ˆå¯†ç ç•Œé¢ï¼‰
             if (lockContentsContainer != null)
             {
                 lockContentsContainer.SetActive(true);
             }
-            // LockManager ¸ºÔğÔÚ½âËøÊ±½« lockContentsContainer ¹Ø±Õ²¢¼¤»î suitcaseOpen
+            // LockManager è´Ÿè´£åœ¨è§£é”æ—¶å°† lockContentsContainer å…³é—­å¹¶æ¿€æ´» suitcaseOpen
             return;
         }
 
-        // Èç¹ûÒÑ½âËø£¬ÔòÇĞ»»ÒÑ´ò¿ªĞĞÀîÏäµÄÏÔÊ¾£¨´ò¿ª/¹Ø±Õ£©
+        // å¦‚æœå·²è§£é”ï¼Œåˆ™åˆ‡æ¢å·²æ‰“å¼€è¡Œæç®±çš„æ˜¾ç¤ºï¼ˆæ‰“å¼€/å…³é—­ï¼‰
         if (suitcaseOpen != null)
         {
             if (!suitcaseOpen.gameObject.activeSelf)
