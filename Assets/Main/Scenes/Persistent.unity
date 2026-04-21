@@ -2811,6 +2811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914343710}
   - component: {fileID: 1914343712}
+  - component: {fileID: 1914343713}
   m_Layer: 0
   m_Name: InventoryController
   m_TagString: Untagged
@@ -2847,6 +2848,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryController
   itemData: {fileID: 11400000, guid: a995011972c707a4e8f07882bd54656c, type: 2}
   itemList: 
+--- !u!114 &1914343713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914343708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c5e76637751824aabfe60306f0d752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySceneVisibilityController
+  inventoryButtonObject: {fileID: 1269524515}
+  inventoryPanelObject: {fileID: 243233932}
+  hideInScenes:
+  - End
 --- !u!1 &1916192282
 GameObject:
   m_ObjectHideFlags: 0

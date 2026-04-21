@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : Singleton<SceneTransitionManager>
 {
-    //³¡¾°¹ı¶ÉÇĞ»»¹ÜÀíÆ÷
+    //åœºæ™¯è¿‡æ¸¡åˆ‡æ¢ç®¡ç†å™¨
     public CanvasGroup fadeCanvasGroup;
     public float fadeDuration;
     private bool isFade;

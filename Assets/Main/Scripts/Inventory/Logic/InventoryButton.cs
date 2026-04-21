@@ -14,11 +14,12 @@ public class InventoryButton : MonoBehaviour
     {
         if (inventoryPanel == null)
         {
-            Debug.LogWarning("InventoryButton: inventoryPanel Î´°ó¶¨¡£");
+            Debug.LogWarning("InventoryButton: inventoryPanel ¦Ä???");
             return;
         }
 
         if (!inventoryPanel.activeSelf)
             inventoryPanel.SetActive(true);
     }
+   
 }
